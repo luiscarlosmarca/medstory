@@ -4,10 +4,11 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.medstory.core.enty.Paciente;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface PacienteRepository extends JpaRepository<Paciente, Serializable> {
+@Repository("repositorio")
+public interface PacienteRepository extends CrudRepository<Paciente, Serializable> {
 
     public abstract Paciente findByNombre(String nombre);
 
