@@ -13,7 +13,7 @@ public class Convertidor {
 
     public List<PacienteModel> convertirLista(List <Paciente> pacientes){
 
-        List<PacienteModel> mPaciente= new ArrayList<>();
+        List<PacienteModel> mPaciente= new ArrayList<PacienteModel>();
 
         for(Paciente paciente: pacientes) {
             mPaciente.add(new PacienteModel(paciente));
