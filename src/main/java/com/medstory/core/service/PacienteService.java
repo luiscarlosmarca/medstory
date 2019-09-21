@@ -48,7 +48,8 @@ public class PacienteService {
     public boolean borrar(String nombre, long id){
 
         try {
-
+        Paciente paciente= repositorio.findByNombreAndId(nombre,id);
+        repositorio.delete(paciente);
             return true;
         }catch (Exception e){
             return false;
@@ -57,9 +58,7 @@ public class PacienteService {
 
     public List<PacienteModel> obtener(){
 
-       List<PacienteModel> pacientes=null;
-
-       return pacientes;
+       return convertidor.convertirLista(repositorio.findAll();
     }
 
 }
